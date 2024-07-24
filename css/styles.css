@@ -74,38 +74,32 @@ h2 {
 }
 
 .job h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 10px 0 5px;
 }
 
 .job p {
-    font-size: 1.1em;
+    font-size: 1.em;
     margin: 5px 0;
 }
 
-.job ul {
+ul {
     list-style: none;
     padding-left: 20px;
 }
 
-.job ul li {
+ul li {
     margin-bottom: 5px;
     position: relative;
 }
-
-.job ul li::before {
+section ul li::before{
     content: "•";
     position: absolute;
     left: -15px;
     color: #007acc;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
+section ul li {
     margin-bottom: 10px;
 }
 
