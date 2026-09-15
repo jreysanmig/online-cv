@@ -554,17 +554,6 @@ a:hover {
     font-size: 14.5px;
 }
 
-.btn--ghost {
-    background: transparent;
-    border: 1px solid var(--accent);
-    color: var(--accent);
-}
-
-.btn--ghost:hover {
-    background: var(--accent);
-    color: #fff;
-}
-
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1100px) {
