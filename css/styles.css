@@ -91,6 +91,23 @@ a:hover {
     color: var(--accent);
 }
 
+.sidebar__sub {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.sidebar__meta {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.45);
+}
+
 .stat {
     display: flex;
     flex-direction: column;
@@ -245,58 +262,38 @@ a:hover {
     text-wrap: pretty;
 }
 
-/* ---------- Skills ---------- */
+/* ---------- Core capabilities ---------- */
 
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 22px 24px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: var(--card-bg);
-}
-
-.card__title {
-    display: flex;
-    align-items: center;
-    gap: 9px;
+.caps {
+    list-style: none;
     margin: 0;
-    font-family: var(--display);
-    font-size: 15px;
-    font-weight: 700;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2px 24px;
+}
+
+.caps li {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 11px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+    font-weight: 600;
     color: var(--ink);
 }
 
-.card__title::before {
+.caps li::before {
     content: "";
     flex: 0 0 auto;
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: var(--accent);
 }
 
-.skill-group {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-.skill-group__label {
-    margin: 0;
-    font-size: 10.5px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--muted);
-}
+/* ---------- Primary technology ---------- */
 
 .chips {
     list-style: none;
@@ -304,16 +301,16 @@ a:hover {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
 }
 
 .chips li {
-    padding: 5px 11px;
+    padding: 7px 14px;
     border: 1px solid var(--chip-border);
     border-radius: 999px;
     background: var(--chip-bg);
     color: var(--chip-ink);
-    font-size: 12.5px;
+    font-size: 13.5px;
     font-weight: 600;
     line-height: 1.35;
 }
@@ -367,6 +364,13 @@ a:hover {
     font-size: 14px;
     font-weight: 600;
     color: var(--accent);
+}
+
+.job__unit {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
 }
 
 .client {
@@ -481,6 +485,39 @@ a:hover {
     color: var(--muted);
 }
 
+/* ---------- Education ---------- */
+
+.edu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--card-bg);
+}
+
+.edu__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.edu__school {
+    margin: 0;
+    font-family: var(--display);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.edu__degree {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--body);
+}
+
 /* ---------- Contact ---------- */
 
 .cta {
@@ -502,6 +539,12 @@ a:hover {
     line-height: 1.6;
     color: var(--body);
     text-wrap: pretty;
+}
+
+.cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .cta .btn {
@@ -554,9 +597,8 @@ a:hover {
         padding: 40px 24px 72px;
     }
 
-    .skill-grid,
-    .rows--split {
-        grid-template-columns: minmax(0, 1fr);
+    .caps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .rows--split {
@@ -578,10 +620,21 @@ a:hover {
         gap: 4px;
     }
 
+    .caps {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
     .rows li {
         flex-direction: column;
         align-items: flex-start;
         gap: 6px;
+    }
+
+    .edu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 20px;
     }
 
     .cta {
